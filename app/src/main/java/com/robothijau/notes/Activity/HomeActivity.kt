@@ -2,6 +2,7 @@ package com.robothijau.notes.Activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.robothijau.notes.Adapter.MyAdapter
 import com.robothijau.notes.R
@@ -19,5 +20,11 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
         supportActionBar?.hide()
+
+        recyclerView = findViewById(R.id.recycerView)
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        adapter = MyAdapter(itemList)
+        recyclerView.adapter = adapter
     }
 }

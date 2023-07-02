@@ -3,14 +3,14 @@
     android:layout_height="80dp"
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:theme="@style/ThemeOverlay.AppCompat.Light"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark"
     app:cardUseCompatPadding="true"
     app:cardCornerRadius="4dp">
 
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:scaleType="fitXY" />
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white" />
 
    <androidx.constraintlayout.widget.ConstraintLayout
        android:layout_width="match_parent"
