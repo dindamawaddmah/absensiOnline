@@ -1,10 +1,12 @@
 package com.robothijau.notes.Activity
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.animation.Animation
 import android.view.animation.AnimationUtils
+import android.widget.Button
 import android.widget.LinearLayout
 import com.robothijau.notes.R
 
@@ -21,6 +23,13 @@ class OnBoardingActivity : AppCompatActivity() {
 
         // Menampilkan kontainer dengan animasi saat activity dibuat
         showContainerWithAnimation()
+
+        val button = findViewById<Button>(R.id.continue_boarding)
+        button.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 
     private fun showContainerWithAnimation() {

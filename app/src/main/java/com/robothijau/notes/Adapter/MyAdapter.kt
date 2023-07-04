@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.robothijau.notes.Interface.ItemClickListener
 import com.robothijau.notes.R
 
 class MyAdapter(private val itemList: List<Student>) :
@@ -26,10 +27,11 @@ class MyAdapter(private val itemList: List<Student>) :
 
     override fun getItemCount(): Int = itemList.size
 
-    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+    inner class ItemViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
         val itemNameTextView: TextView = itemView.findViewById(R.id.judul)
         val itemNimTextView: TextView = itemView.findViewById(R.id.desc)
     }
 
     data class Student(val judul: String, val desc: String)
 }
+

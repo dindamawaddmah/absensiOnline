@@ -11,9 +11,20 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Notes"
         tools:targetApi="31">
-
         <activity
-            android:name=".Activity.DescriptionActivity"
+            android:name=".Activity.ProfileActivity"
+            android:exported="false" />
+         <activity
+             android:name=".Activity.DescActivity"
+             android:exported="false" />
+         <activity
+             android:name=".Activity.HomeActivity"
+             android:exported="false" />
+         <activity
+             android:name=".Activity.LoginActivity"
+             android:exported="false" />
+        <activity
+            android:name=".Activity.OnBoardingActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
